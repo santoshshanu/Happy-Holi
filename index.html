@@ -5,13 +5,19 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <section class="animated-background">
+        <div id="stars1"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </section>
     <div>
-        <button class="happy-holi-btn" onclick="playAudio()">Happy Holi</button>
+        <button class="happy-holi-btn" onclick="playAudio()"><p id="btn">CLICK HERE</p></button>
     </div>
+    <br><br>
     <div class="video-frame">
-        <video autoplay loop muted class="background-video">
+        <!-- <video autoplay loop muted class="background-video">
             <source src="Happy Holi.mp4" type="video/mp4">
-        </video>
+        </video> -->
         <div class="scrolling-images">
             <img src="family4.jpg" alt="Holi Image 1" class="foreground-image">
             <img src="family5.jpg" alt="Holi Image 1" class="foreground-image">
@@ -34,6 +40,14 @@
             var audio = document.getElementById('audioPlayer');
             audio.play();
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+        var button = document.querySelector('.happy-holi-btn');
+
+        button.addEventListener("click", function() {
+            document.getElementById("btn").innerText = "HAPPY HOLI";
+        });
+    });
     </script>
 </body>
 </html>
